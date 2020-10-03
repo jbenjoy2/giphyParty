@@ -10,7 +10,7 @@ const key = '5p9C87GMK7R57sNurdDeoyR8FZ00ucUC';
 //search function that makes request and renders
 async function searchGifs(searchTerm, key) {
 	try {
-		const res = await axios.get('http://api.giphy.com/v1/gifs/search', {
+		const res = await axios.get('https://api.giphy.com/v1/gifs/search', {
 			params : { q: searchTerm, api_key: key }
 		});
 		let gifURL = chooseRandom(res);
